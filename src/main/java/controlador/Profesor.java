@@ -14,5 +14,42 @@ public class Profesor extends Persona {
     private String area;
     private double salarioHora;
     private int horasMes;
+    public Profesor(String cedula, String area, double salarioHora, int horasMes) {
+    this.cedula = cedula;
+    this.area = area;   
+    this.salarioHora = salarioHora;
+    this.horasMes = horasMes;
+    
+    }
+        public String getCedula() {
+        return cedula;
+    }
 
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public double getSalarioHora() {
+        return salarioHora;
+    }
+
+    public void setSalarioHora(double salarioHora) {
+        this.salarioHora = salarioHora;
+    }
+
+    public int getHorasMes() {
+        return horasMes;
+    }
+
+    public void setHorasMes(int horasMes) {
+        this.horasMes = horasMes;
+    }
 }
