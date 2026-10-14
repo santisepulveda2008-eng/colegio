@@ -19,8 +19,23 @@ public class Profesor extends Persona {
     this.area = area;   
     this.salarioHora = salarioHora;
     this.horasMes = horasMes;
-    
-    
+    }
+    public double calcularPago() {
+    return salarioHora * horasMes * (1 + PORCENTAJE_PREPARACION);
+    }
+
+    public double calcularPago(int horas) {
+        return salarioHora * horas * (1 + PORCENTAJE_PREPARACION);
+    }
+        public double calcularPrestaciones() {
+        return calcularPago() * PORCENTAJE_PRESTACIONES;
+    }
+
+    @Override
+    public String obtenerResumen() {
+        return super.obtenerResumen()
+                + " | Cédula: " + cedula
+                + " | Área: " + area;
     }
     private static final double PORCENTAJE_PREPARACION = 0.30;
     private static final double PORCENTAJE_PRESTACIONES = 0.19;
