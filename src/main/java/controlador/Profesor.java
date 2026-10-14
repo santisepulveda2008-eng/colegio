@@ -1,0 +1,73 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package controlador;
+
+/**
+ *
+ * @author santi
+ */
+public class Profesor extends Persona {
+
+    private String cedula;
+    private String area;
+    private double salarioHora;
+    private int horasMes;
+    public Profesor(String cedula, String area, double salarioHora, int horasMes) {
+    this.cedula = cedula;
+    this.area = area;   
+    this.salarioHora = salarioHora;
+    this.horasMes = horasMes;
+    }
+    public double calcularPago() {
+    return salarioHora * horasMes * (1 + PORCENTAJE_PREPARACION);
+    }
+
+    public double calcularPago(int horas) {
+        return salarioHora * horas * (1 + PORCENTAJE_PREPARACION);
+    }
+        public double calcularPrestaciones() {
+        return calcularPago() * PORCENTAJE_PRESTACIONES;
+    }
+
+    @Override
+    public String obtenerResumen() {
+        return super.obtenerResumen()
+                + " | Cédula: " + cedula
+                + " | Área: " + area;
+    }
+    private static final double PORCENTAJE_PREPARACION = 0.30;
+    private static final double PORCENTAJE_PRESTACIONES = 0.19;
+        public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public double getSalarioHora() {
+        return salarioHora;
+    }
+
+    public void setSalarioHora(double salarioHora) {
+        this.salarioHora = salarioHora;
+    }
+
+    public int getHorasMes() {
+        return horasMes;
+    }
+
+    public void setHorasMes(int horasMes) {
+        this.horasMes = horasMes;
+    }
+}
