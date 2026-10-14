@@ -8,11 +8,17 @@ package modelo;
  *
  * @author santi
  */
+
 import java.util.ArrayList;
 
 public class Colegio {
 
     private ArrayList<Estudiante> estudiantes;
     private ArrayList<Profesor> profesores;
+
+    public Colegio() {
+        estudiantes = new ArrayList<>();
+        profesores = new ArrayList<>();
+    }
 
 }
