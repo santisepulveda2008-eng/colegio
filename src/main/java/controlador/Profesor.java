@@ -20,7 +20,10 @@ public class Profesor extends Persona {
     this.salarioHora = salarioHora;
     this.horasMes = horasMes;
     
+    
     }
+    private static final double PORCENTAJE_PREPARACION = 0.30;
+    private static final double PORCENTAJE_PRESTACIONES = 0.19;
         public String getCedula() {
         return cedula;
     }
