@@ -16,4 +16,7 @@ public class Persona {
     private String direccion;
     private String telefono;
     private LocalDate fechaNacimiento;
+    
+    public Persona() {
+    }
 }
