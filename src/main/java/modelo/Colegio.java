@@ -35,5 +35,11 @@ public class Colegio {
     public void setProfesores(ArrayList<Profesor> profesores) {
         this.profesores = profesores;
     }
+        public void agregarEstudiante(Estudiante e) {
+        estudiantes.add(e);
+    }
 
+    public void agregarProfesor(Profesor p) {
+        profesores.add(p);
+    }
 }
