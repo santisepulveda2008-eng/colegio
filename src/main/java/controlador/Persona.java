@@ -50,4 +50,10 @@ public class Persona {
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
+    public String obtenerResumen() {
+    return "Nombre: " + nombre
+                + " | Dirección: " + direccion
+                + " | Teléfono: " + telefono
+                + " | Nacimiento: " + fechaNacimiento;
+    }
 }
